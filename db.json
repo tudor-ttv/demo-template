@@ -1,303 +1,305 @@
-[
-  {
-    "id": "cat0",
-    "defaultLabel": "Identity information",
-    "attribute": [
-      {
-        "name": "sn",
-        "defaultLabel": "Lastname *:",
-        "orgChart": {
-          "compactDisplay": true
+{
+  "categories": [
+    {
+      "id": "cat0",
+      "defaultLabel": "Identity information",
+      "attribute": [
+        {
+          "name": "sn",
+          "defaultLabel": "Lastname *:",
+          "orgChart": {
+            "compactDisplay": true
+          },
+          "syntax": {
+            "type": "text",
+            "case": "mixedcase"
+          },
+          "form": {
+            "hint": "Employee's lastname",
+            "help": "Employee's lastname",
+            "errorMessage": "This field is required",
+            "control": "standard",
+            "displayed": "always",
+            "editable": "always",
+            "mandatory": true,
+            "multi": false,
+            "displayInGroupForms": true
+          },
+          "isEnabled": true
         },
-        "syntax": {
-          "type": "text",
-          "case": "mixedcase"
+        {
+          "name": "givenName",
+          "defaultLabel": "Firstname *:",
+          "syntax": {
+            "type": "text",
+            "case": "mixedcase"
+          },
+          "form": {
+            "hint": "Employee's firstname",
+            "help": "Employee's firstname",
+            "errorMessage": "This field is required",
+            "control": "standard",
+            "displayed": "always",
+            "editable": "always",
+            "mandatory": true,
+            "multi": false,
+            "displayInGroupForms": true
+          },
+          "isEnabled": true
         },
-        "form": {
-          "hint": "Employee's lastname",
-          "help": "Employee's lastname",
-          "errorMessage": "This field is required",
-          "control": "standard",
-          "displayed": "always",
-          "editable": "always",
-          "mandatory": true,
-          "multi": false,
-          "displayInGroupForms": true
+        {
+          "name": "mail",
+          "defaultLabel": "eMail address:",
+          "syntax": {
+            "type": "text"
+          },
+          "form": {
+            "hint": "Employee's eMail address",
+            "help": "Employee's eMail address",
+            "control": "standard",
+            "displayed": "always",
+            "editable": "always",
+            "mandatory": false,
+            "multi": false,
+            "customType": "mail"
+          },
+          "isEnabled": true
         },
-        "isEnabled": true
-      },
-      {
-        "name": "givenName",
-        "defaultLabel": "Firstname *:",
-        "syntax": {
-          "type": "text",
-          "case": "mixedcase"
+        {
+          "name": "evdidmActivationLevel",
+          "defaultLabel": "Activation level:",
+          "syntax": {
+            "selection": [
+              {
+                "value": "999",
+                "label": "Activated"
+              },
+              {
+                "value": "0",
+                "label": "Deactivated"
+              }
+            ],
+            "type": "integer",
+            "case": "mixedcase"
+          },
+          "form": {
+            "hint": "State of the user and his accounts",
+            "help": "State of the user and his accounts",
+            "errorMessage": "This field is required",
+            "control": "standard",
+            "displayed": "always",
+            "editable": "always",
+            "mandatory": false,
+            "multi": false
+          },
+          "initRule": {
+            "value": "999"
+          },
+          "isEnabled": false
         },
-        "form": {
-          "hint": "Employee's firstname",
-          "help": "Employee's firstname",
-          "errorMessage": "This field is required",
-          "control": "standard",
-          "displayed": "always",
-          "editable": "always",
-          "mandatory": true,
-          "multi": false,
-          "displayInGroupForms": true
+        {
+          "syntax": {
+            "type": "text",
+            "selection": null,
+            "min": 10,
+            "max": 200
+          },
+          "form": {
+            "multi": false,
+            "help": "Job Description",
+            "hint": "Short description of the Position",
+            "control": "textarea",
+            "displayed": "always",
+            "displayedIf": "",
+            "hiddenBehavior": null,
+            "editable": "always",
+            "mandatory": true,
+            "errorMessage": "",
+            "customType": null,
+            "advancedControl": null
+          },
+          "name": "jobDescription",
+          "description": "",
+          "defaultLabel": "Job Description",
+          "serviceType": "",
+          "isEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "cat1",
+      "defaultLabel": "Personal Information",
+      "attribute": [
+        {
+          "syntax": {
+            "type": "text",
+            "selection": [
+              {
+                "value": "m",
+                "label": "Male"
+              },
+              {
+                "value": "f",
+                "label": "Female"
+              }
+            ],
+            "min": null,
+            "max": null
+          },
+          "form": {
+            "displayed": "always",
+            "control": "radio",
+            "editable": "always",
+            "mandatory": true,
+            "multi": false,
+            "hint": "Gender",
+            "help": "",
+            "displayInGroupForms": false,
+            "customType": null,
+            "advancedControl": null,
+            "displayedIf": "",
+            "hiddenBehavior": null,
+            "errorMessage": "please choose a gender"
+          },
+          "name": "gender",
+          "description": "",
+          "defaultLabel": "Gender",
+          "serviceType": "",
+          "isEnabled": true
         },
-        "isEnabled": true
-      },
-      {
-        "name": "mail",
-        "defaultLabel": "eMail address:",
-        "syntax": {
-          "type": "text"
+        {
+          "name": "birthday",
+          "defaultLabel": "Birthday:",
+          "syntax": {
+            "type": "date"
+          },
+          "form": {
+            "constraint": "",
+            "hint": "Employee's Birthday",
+            "help": "Employee's Birthday",
+            "control": "standard",
+            "displayed": "always",
+            "editable": "always",
+            "mandatory": false,
+            "multi": false
+          },
+          "isEnabled": true
         },
-        "form": {
-          "hint": "Employee's eMail address",
-          "help": "Employee's eMail address",
-          "control": "standard",
-          "displayed": "always",
-          "editable": "always",
-          "mandatory": false,
-          "multi": false,
-          "customType": "mail"
+        {
+          "name": "telephoneNumber",
+          "defaultLabel": "Phone number:",
+          "syntax": {
+            "type": "text"
+          },
+          "form": {
+            "hint": "Employee's phone number",
+            "help": "Employee's phone number",
+            "control": "standard",
+            "displayed": "always",
+            "editable": "always",
+            "mandatory": false,
+            "multi": false,
+            "customType": "tel"
+          },
+          "isEnabled": true
         },
-        "isEnabled": true
-      },
-      {
-        "name": "evdidmActivationLevel",
-        "defaultLabel": "Activation level:",
-        "syntax": {
-          "selection": [
-            {
-              "value": "999",
-              "label": "Activated"
-            },
-            {
-              "value": "0",
-              "label": "Deactivated"
-            }
-          ],
-          "type": "integer",
-          "case": "mixedcase"
+        {
+          "name": "spokenLanguages",
+          "defaultLabel": "known Languages:",
+          "syntax": {
+            "selection": [
+              {
+                "value": "de",
+                "label": "Deutsch"
+              },
+              {
+                "value": "en",
+                "label": "English"
+              },
+              {
+                "value": "fr",
+                "label": "Français"
+              },
+              {
+                "value": "ja",
+                "label": "Japanese"
+              },
+              {
+                "value": "nl",
+                "label": "Dutch"
+              }
+            ],
+            "type": "text",
+            "case": "mixedcase"
+          },
+          "form": {
+            "hint": "Language for receiving emails",
+            "help": "Language for receiving emails",
+            "control": "standard",
+            "displayed": "always",
+            "editable": "always",
+            "mandatory": false,
+            "multi": true
+          },
+          "isEnabled": true
         },
-        "form": {
-          "hint": "State of the user and his accounts",
-          "help": "State of the user and his accounts",
-          "errorMessage": "This field is required",
-          "control": "standard",
-          "displayed": "always",
-          "editable": "always",
-          "mandatory": false,
-          "multi": false
+        {
+          "syntax": {
+            "type": "integer",
+            "selection": null,
+            "min": 100,
+            "max": 220
+          },
+          "form": {
+            "displayed": "always",
+            "control": "standard",
+            "editable": "always",
+            "mandatory": false,
+            "multi": false,
+            "hint": "Height in cm",
+            "help": "Slide to the desired height in cm",
+            "displayInGroupForms": false,
+            "customType": "slider",
+            "advancedControl": null,
+            "displayedIf": "",
+            "hiddenBehavior": null,
+            "errorMessage": ""
+          },
+          "name": "height",
+          "description": "",
+          "defaultLabel": "Height",
+          "serviceType": "",
+          "isEnabled": true
         },
-        "initRule": {
-          "value": "999"
-        },
-        "isEnabled": false
-      },
-      {
-        "syntax": {
-          "type": "text",
-          "selection": null,
-          "min": 10,
-          "max": 200
-        },
-        "form": {
-          "multi": false,
-          "help": "Job Description",
-          "hint": "Short description of the Position",
-          "control": "textarea",
-          "displayed": "always",
-          "displayedIf": "",
-          "hiddenBehavior": null,
-          "editable": "always",
-          "mandatory": true,
-          "errorMessage": "",
-          "customType": null,
-          "advancedControl": null
-        },
-        "name": "jobDescription",
-        "description": "",
-        "defaultLabel": "Job Description",
-        "serviceType": "",
-        "isEnabled": true
-      }
-    ]
-  },
-  {
-    "id": "cat1",
-    "defaultLabel": "Personal Information",
-    "attribute": [
-      {
-        "syntax": {
-          "type": "text",
-          "selection": [
-            {
-              "value": "m",
-              "label": "Male"
-            },
-            {
-              "value": "f",
-              "label": "Female"
-            }
-          ],
-          "min": null,
-          "max": null
-        },
-        "form": {
-          "displayed": "always",
-          "control": "radio",
-          "editable": "always",
-          "mandatory": true,
-          "multi": false,
-          "hint": "Gender",
-          "help": "",
-          "displayInGroupForms": false,
-          "customType": null,
-          "advancedControl": null,
-          "displayedIf": "",
-          "hiddenBehavior": null,
-          "errorMessage": "please choose a gender"
-        },
-        "name": "gender",
-        "description": "",
-        "defaultLabel": "Gender",
-        "serviceType": "",
-        "isEnabled": true
-      },
-      {
-        "name": "birthday",
-        "defaultLabel": "Birthday:",
-        "syntax": {
-          "type": "date"
-        },
-        "form": {
-          "constraint": "",
-          "hint": "Employee's Birthday",
-          "help": "Employee's Birthday",
-          "control": "standard",
-          "displayed": "always",
-          "editable": "always",
-          "mandatory": false,
-          "multi": false
-        },
-        "isEnabled": true
-      },
-      {
-        "name": "telephoneNumber",
-        "defaultLabel": "Phone number:",
-        "syntax": {
-          "type": "text"
-        },
-        "form": {
-          "hint": "Employee's phone number",
-          "help": "Employee's phone number",
-          "control": "standard",
-          "displayed": "always",
-          "editable": "always",
-          "mandatory": false,
-          "multi": false,
-          "customType": "tel"
-        },
-        "isEnabled": true
-      },
-      {
-        "name": "spokenLanguages",
-        "defaultLabel": "known Languages:",
-        "syntax": {
-          "selection": [
-            {
-              "value": "de",
-              "label": "Deutsch"
-            },
-            {
-              "value": "en",
-              "label": "English"
-            },
-            {
-              "value": "fr",
-              "label": "Français"
-            },
-            {
-              "value": "ja",
-              "label": "Japanese"
-            },
-            {
-              "value": "nl",
-              "label": "Dutch"
-            }
-          ],
-          "type": "text",
-          "case": "mixedcase"
-        },
-        "form": {
-          "hint": "Language for receiving emails",
-          "help": "Language for receiving emails",
-          "control": "standard",
-          "displayed": "always",
-          "editable": "always",
-          "mandatory": false,
-          "multi": true
-        },
-        "isEnabled": true
-      },
-      {
-        "syntax": {
-          "type": "integer",
-          "selection": null,
-          "min": 100,
-          "max": 220
-        },
-        "form": {
-          "displayed": "always",
-          "control": "standard",
-          "editable": "always",
-          "mandatory": false,
-          "multi": false,
-          "hint": "Height in cm",
-          "help": "Slide to the desired height in cm",
-          "displayInGroupForms": false,
-          "customType": "slider",
-          "advancedControl": null,
-          "displayedIf": "",
-          "hiddenBehavior": null,
-          "errorMessage": ""
-        },
-        "name": "height",
-        "description": "",
-        "defaultLabel": "Height",
-        "serviceType": "",
-        "isEnabled": true
-      },
-      {
-        "syntax": {
-          "type": "bool",
-          "selection": null,
-          "min": null,
-          "max": null
-        },
-        "form": {
-          "displayed": "always",
-          "control": "standard",
-          "editable": "always",
-          "mandatory": false,
-          "multi": false,
-          "hint": "has driving license",
-          "help": "Choose if account identity has a driving license",
-          "displayInGroupForms": false,
-          "customType": null,
-          "advancedControl": null,
-          "displayedIf": "",
-          "hiddenBehavior": null,
-          "errorMessage": ""
-        },
-        "name": "drivingLicense",
-        "description": "",
-        "defaultLabel": "Has Driving license",
-        "serviceType": "",
-        "isEnabled": true
-      }
-    ]
-  }
-]
+        {
+          "syntax": {
+            "type": "bool",
+            "selection": null,
+            "min": null,
+            "max": null
+          },
+          "form": {
+            "displayed": "always",
+            "control": "standard",
+            "editable": "always",
+            "mandatory": false,
+            "multi": false,
+            "hint": "has driving license",
+            "help": "Choose if account identity has a driving license",
+            "displayInGroupForms": false,
+            "customType": null,
+            "advancedControl": null,
+            "displayedIf": "",
+            "hiddenBehavior": null,
+            "errorMessage": ""
+          },
+          "name": "drivingLicense",
+          "description": "",
+          "defaultLabel": "Has Driving license",
+          "serviceType": "",
+          "isEnabled": true
+        }
+      ]
+    }
+  ]
+}
