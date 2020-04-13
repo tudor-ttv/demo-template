@@ -205,7 +205,7 @@
         },
         {
           "name": "spokenLanguages",
-          "defaultLabel": "known Languages",
+          "defaultLabel": "Known languages",
           "syntax": {
             "selection": [
               {
